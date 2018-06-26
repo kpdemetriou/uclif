@@ -1,0 +1,102 @@
+% rebase('base.html')
+
+<div class="jumbotron">
+    <h1 class="display-3">Single Sign On</h1>
+    <p class="lead">A JWT has been successfully acquired. This page shows various extracted attributes.</p>
+    <p><a class="btn btn-lg btn-primary" href="/" role="button">Back</a> <a class="btn btn-lg btn-success" href="/sso" role="button">Retry</a></p>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <th>Name</th>
+        <th>Value(s)</th>
+    </thead>
+
+    <tbody>
+        <tr class="table-success">
+            <td>JWT Signature</td>
+            <td><strong>Verified</strong> (Elliptic Curve DSA)</td>
+        </tr>
+
+        <tr>
+            <td>JWT ID</td>
+            <td>{{info_jwt_jti}}</td>
+        </tr>
+
+        <tr>
+            <td>JWT Issuer</td>
+            <td>{{info_jwt_iss}}</td>
+        </tr>
+
+        <tr>
+            <td>JWT Audience</td>
+            <td>{{info_jwt_aud}}</td>
+        </tr>
+
+        <tr>
+            <td>JWT Expiration</td>
+            <td>{{info_jwt_exp}}</td>
+        </tr>
+
+        <tr>
+            <td>JWT Not Before</td>
+            <td>{{info_jwt_nbf}}</td>
+        </tr>
+
+        <tr>
+            <td>JWT Issued At</td>
+            <td>{{info_jwt_iat}}</td>
+        </tr>
+
+        <tr>
+            <td>OAuth2 State</td>
+            <td>{{info_oauth2_state}}</td>
+        </tr>
+
+        <tr>
+            <td>OAuth2 Code</td>
+            <td>{{info_oauth2_code}}</td>
+        </tr>
+
+        <tr>
+            <td>OAuth2 Token Type</td>
+            <td>{{info_oauth2_token_type}}</td>
+        </tr>
+
+        <tr>
+            <td>OAuth2 Expires In</td>
+            <td>{{info_oauth2_expires_in}}</td>
+        </tr>
+
+        <tr>
+            <td>OAuth2 Client ID</td>
+            <td>{{info_oauth2_client_id}}</td>
+        </tr>
+
+        <tr>
+            <td>OAuth2 Client Secret</td>
+            <td>{{info_oauth2_client_secret}}</td>
+        </tr>
+
+        <tr>
+            <td>OAuth2 Redirect URI</td>
+            <td><a href="{{info_oauth2_redirect_uri}}">{{info_oauth2_redirect_uri}}</a></td>
+        </tr>
+
+        <tr>
+            <td>OAuth2 Auth Endpoint</td>
+            <td><a href="{{info_oauth2_auth_endpoint}}">{{info_oauth2_auth_endpoint}}</a></td>
+        </tr>
+
+        <tr>
+            <td>OAuth2 Token Endpoint</td>
+            <td><a href="{{info_oauth2_token_endpoint}}">{{info_oauth2_token_endpoint}}</a></td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Public Key</h3>
+<pre><code>{{info_pre_key}}</code></pre>
+
+<h3>Javascript Web Token</h3>
+<pre><code class="json">{{info_pre_jwt}}</code></pre>
